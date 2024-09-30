@@ -185,4 +185,5 @@ To track kids activity including keystrokes, audio, screenshots, clipboard data 
         count += 1
 
 # RESULT
-        A python program that tracks the kid's activity including keystrokes, audio, screenshots, clipboard data and System information have been completed and executed successfully.
+        A python program that tracks the kid's activity including keystrokes, audio, screenshots, clipboard data and 
+        System information have been completed and executed successfully.
