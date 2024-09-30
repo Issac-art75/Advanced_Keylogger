@@ -30,7 +30,7 @@
   A typical Keylogger records all keystrokes typed by the user. The keystrokes are stored in key_log.txt. 
   Pynput package used to recored keystrokes.  
        
-  3 functions are used: 
+  3 functions are used:    
       (i)   def on_press(key) --> records each keys  
       (ii)  def write_file(keys): --> append keystrokes to the file (key_log.txt)  
       (iii) on_release(key) --> terminates the keylogger program upon clicking esc button  
@@ -67,6 +67,8 @@
 ## 8) Encryption/Decryption
   The first 3 files mentioned in the previous section are encrypted and send over the email and 
   others are not encrypted before sending. 
+  A Script is used to generate the key.
+  encrypted files could be decrytped using a drecryption script and the key..
 
 
 # PROGRAM  
