@@ -20,6 +20,25 @@ To track kids activity including keystrokes, audio, screenshots, clipboard data 
    * PIL
 3. System with minimum 4GB RAM
 
+# PROCEDURE: 
+
+## 1) Importing all the modules/packages
+        There are lot of modules/libraries required to make this keylogger. The necessary libraries are mentioned in 'componenets required' section
+        
+## 2) Building Keylogger
+        A typical Keylogger records all keystrokes typed by the user. The keystrokes are stored in key_log.txt. Pynput package used to recored keystrokes.
+       
+        3 functions are used: 
+        (i) def on_press(key) --> records each keys 
+        (ii) def write_file(keys): --> append keystrokes to the file (key_log.txt)
+        (iii) on_release(key) --> terminates the keylogger program upon clicking esc button
+
+## System Information
+
+
+
+
+
 # PROGRAM  
 
 ## Keylogger Functionality
