@@ -35,10 +35,11 @@
       (ii)  def write_file(keys): --> append keystrokes to the file (key_log.txt)  
       (iii) on_release(key) --> terminates the keylogger program upon clicking esc button  
 
-## 3) System Information  
-  Retrieves System information to identify which device being used.  
+## 3) System Information   
+  Retrieves System information to identify which device being used. 
+  2 packages are used namely platform and socket.
 
-  Informations obtained: 
+  Informations obtained:  
       (i)   hostname  
       (ii)  private IP address  
       (iii) Public IP address   
@@ -51,13 +52,15 @@
 
 ## 5) Microphone  
   captures voice for 30 seconds. It is intended to capture who the child speaks to.
-  Packages like scipy and sounddevice are used for this functionality.
+  Packages like scipy and sounddevice are used for this functionality. the format of the file is wav.
 
 ## 6) Screenshot  
-  Captures the screen to identify what the user is actually doing on the screen.
+  Captures the screen to identify what the user is actually doing on the screen. 
+  PIL module is used to capture the screen.
+  The image is formatted into png.
 
 ## 7) Email  
-  Below Files are sent over the email 
+  Below Files are sent over the email  
         (i)   key_log.txt  
         (ii)  sys_info.txt  
         (iii) clipboard.txt  
