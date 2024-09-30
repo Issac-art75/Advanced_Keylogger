@@ -5,7 +5,7 @@ To track kids activity including keystrokes, audio, screenshots, clipboard data 
 # COMPONENTS REQUIRED  
 1. Pycharm IDE
 2. Downloading necessary packages/libraries:
-   * email
+   * email 
    * smtplib
    * socket
    * platform
