@@ -1,10 +1,10 @@
 # Advanced_Keylogger
 # AIM  
-  To track kids activity(below 18) for legitimate purpose by recording keystrokes, audio, screenshots, clipboard data and System information
+  To track kids activity(below 18) for legitimate purpose by recording keystrokes, audio, screenshots, clipboard data and System information and send this information over the email to check whether kid is indulging himself in bad activities.
 
 # COMPONENTS REQUIRED  
-  1. Pycharm IDE
-  2. Downloading necessary packages/libraries:
+  1) Pycharm IDE
+  2) Downloading necessary packages/libraries:
      * email 
      * smtplib
      * socket
@@ -18,7 +18,7 @@
      * cryptography
      * requests
      * PIL
-  3. System with minimum 4GB RAM
+  3) System with minimum 4GB RAM
 
 # PROCEDURE: 
 
@@ -234,5 +234,5 @@
         count += 1
 
 # RESULT
-        A python program that tracks the kid's activity including keystrokes, audio, screenshots, clipboard data and 
-        System information have been completed and executed successfully.
+  A python program that tracks the kid's activity including keystrokes, audio, screenshots, clipboard data and 
+System information have been completed and executed successfully.
