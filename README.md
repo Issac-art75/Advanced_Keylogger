@@ -1,10 +1,10 @@
 # Advanced_Keylogger
 # AIM  
-To track kids activity including keystrokes, audio, screenshots, clipboard data and System information
+  To track kids activity including keystrokes, audio, screenshots, clipboard data and System information
 
 # COMPONENTS REQUIRED  
-1. Pycharm IDE
-2. Downloading necessary packages/libraries:
+  1. Pycharm IDE
+  2. Downloading necessary packages/libraries:
    * email 
    * smtplib
    * socket
@@ -18,25 +18,55 @@ To track kids activity including keystrokes, audio, screenshots, clipboard data 
    * cryptography
    * requests
    * PIL
-3. System with minimum 4GB RAM
+  3. System with minimum 4GB RAM
 
 # PROCEDURE: 
 
-## 1) Importing all the modules/packages
-        There are lot of modules/libraries required to make this keylogger. The necessary libraries are mentioned in 'componenets required' section
+## 1) Importing all the modules/packages  
+        There are lot of modules/libraries required to make this keylogger. The necessary libraries are mentioned 
+        in 'componenets required' section
         
-## 2) Building Keylogger
-        A typical Keylogger records all keystrokes typed by the user. The keystrokes are stored in key_log.txt. Pynput package used to recored keystrokes.
+## 2) Building Keylogger  
+        A typical Keylogger records all keystrokes typed by the user. The keystrokes are stored in key_log.txt. 
+        Pynput package used to recored keystrokes.
        
         3 functions are used: 
-        (i) def on_press(key) --> records each keys 
-        (ii) def write_file(keys): --> append keystrokes to the file (key_log.txt)
+        (i)   def on_press(key) --> records each keys 
+        (ii)  def write_file(keys): --> append keystrokes to the file (key_log.txt)
         (iii) on_release(key) --> terminates the keylogger program upon clicking esc button
 
-## System Information
+## 3) System Information  
+         Retrieves System information to identify which device being used.
 
+         Informations obtained: 
+         (i)   hostname
+         (ii)  private IP address
+         (iii) Public IP address 
+         (iv)  Processor
+         (v)   System & Version
 
+## 4) Clipboard data  
+         Whenever a user copies a URL,text,passwords... it is considered as clipboard data. 
+         This data captures using win32clipboard package
 
+## 5) Microphone  
+         captures voice for 30 seconds. It is intended to capture who the child speaks to.
+         Packages like scipy and sounddevice are used for this functionality.
+
+## 6) Screenshot  
+        Captures the screen to identify what the user is actually doing on the screen.
+
+## 7) Email 
+         Below Files are sent over the email 
+           (i)   key_log.txt
+           (ii)  sys_info.txt
+           (iii) clipboard.txt
+           (iv)  audio.wav
+           (v)   screenshot.png
+          
+## 8) Encryption/Decryption
+          The first 3 files mentioned in the previous section are encrypted and send over the email and 
+          others are not encrypted before sending. 
 
 
 # PROGRAM  
