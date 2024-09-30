@@ -238,6 +238,22 @@
     
         count += 1
 
+# Output  
+1) system information
+![sys_info](https://github.com/user-attachments/assets/015927e1-00c6-4420-92d7-dbef86765679)
+
+2) clipboard data
+![clipboard](https://github.com/user-attachments/assets/1b1ac549-6351-4d3c-a2ea-b30e4cfa1de8)
+
+3) screenshot
+![screenshot](https://github.com/user-attachments/assets/44047d8f-985c-43c7-b02d-98c1718ca1e6)
+
+4) terminal output
+![terminal output](https://github.com/user-attachments/assets/702b11f1-1ce5-4023-a07b-ade8c1592882)
+
+5) emails
+![emails](https://github.com/user-attachments/assets/26ef6f37-cd70-41ad-a68c-9f458bf51bdb)  
+
 # RESULT
   A python program that tracks the kid's activity including keystrokes, audio, screenshots, clipboard data and 
 System information have been completed and executed successfully.
