@@ -1,23 +1,23 @@
 # Advanced_Keylogger
 # AIM  
-  To track kids activity including keystrokes, audio, screenshots, clipboard data and System information
+  To track kids activity(below 18) for legitimate purpose by recording keystrokes, audio, screenshots, clipboard data and System information
 
 # COMPONENTS REQUIRED  
   1. Pycharm IDE
   2. Downloading necessary packages/libraries:
-   * email 
-   * smtplib
-   * socket
-   * platform
-   * win32clipboard
-   * pynput
-   * time
-   * os
-   * scipy
-   * sounddevice
-   * cryptography
-   * requests
-   * PIL
+     * email 
+     * smtplib
+     * socket
+     * platform
+     * win32clipboard
+     * pynput
+     * time
+     * os
+     * scipy
+     * sounddevice
+     * cryptography
+     * requests
+     * PIL
   3. System with minimum 4GB RAM
 
 # PROCEDURE: 
@@ -28,22 +28,22 @@
         
 ## 2) Building Keylogger  
   A typical Keylogger records all keystrokes typed by the user. The keystrokes are stored in key_log.txt. 
-  Pynput package used to recored keystrokes.
+  Pynput package used to recored keystrokes.  
        
   3 functions are used: 
-      (i)   def on_press(key) --> records each keys 
-      (ii)  def write_file(keys): --> append keystrokes to the file (key_log.txt)
-      (iii) on_release(key) --> terminates the keylogger program upon clicking esc button
+      (i)   def on_press(key) --> records each keys  
+      (ii)  def write_file(keys): --> append keystrokes to the file (key_log.txt)  
+      (iii) on_release(key) --> terminates the keylogger program upon clicking esc button  
 
 ## 3) System Information  
-  Retrieves System information to identify which device being used.
+  Retrieves System information to identify which device being used.  
 
   Informations obtained: 
-      (i)   hostname
-      (ii)  private IP address
-      (iii) Public IP address 
-      (iv)  Processor
-      (v)   System & Version
+      (i)   hostname  
+      (ii)  private IP address  
+      (iii) Public IP address   
+      (iv)  Processor  
+      (v)   System & Version  
 
 ## 4) Clipboard data  
   Whenever a user copies a URL,text,passwords... it is considered as clipboard data. 
@@ -58,11 +58,11 @@
 
 ## 7) Email  
   Below Files are sent over the email 
-        (i)   key_log.txt
-        (ii)  sys_info.txt
-        (iii) clipboard.txt
-        (iv)  audio.wav
-        (v)   screenshot.png
+        (i)   key_log.txt  
+        (ii)  sys_info.txt  
+        (iii) clipboard.txt  
+        (iv)  audio.wav  
+        (v)   screenshot.png  
           
 ## 8) Encryption/Decryption
   The first 3 files mentioned in the previous section are encrypted and send over the email and 
